@@ -7,3 +7,4 @@ React JS Fundamentals Course!
 
 -[x] \#2.0 Creating your first React Component 까지 완료, 커밋 
 -[x] \#2.1 Reusable Components with JSX + Props 
+-[ ] \#2.2 Dynamic Component Generation 
