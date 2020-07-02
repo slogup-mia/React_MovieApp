@@ -20,7 +20,7 @@ React JS Fundamentals Course!
 
 #### 4. MAKING THE MOVIE APP
 -[x] \#4.0 Fetching Movies from API 
--[ ] \#4.1 Styling the Movies
+-[x] \#4.1 Rendering the Movies
 -[ ] \#4.2 Styling the Movies
 -[ ] \#4.3 Adding Genres
 -[ ] \#4.4 Styles Timelapse
