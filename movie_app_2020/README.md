@@ -9,3 +9,4 @@ React JS Fundamentals Course!
 -[x] \#2.1 Reusable Components with JSX + Props 
 -[x] \#2.2 Dynamic Component Generation 
 -[x] \#2.3 map Recap
+-[x] \#2.4 Protection with Prop Types
