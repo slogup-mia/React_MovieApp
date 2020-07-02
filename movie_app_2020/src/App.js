@@ -1,32 +1,35 @@
 import React from 'react';
 
 
+// React.Component 는 render() 외에도 여러 메소드를 갖는다.
+    // 그 중 이번에 알아 볼 것은 life cycle method
+    // : 리액트가 컴포넌트를 생성/없애는 방법
+    // : 리액트가 컴포넌트를 생성/없애기 전/후로 실행되는 메소드들의 집합을 말하는건가?
+    // 모든 life cycle method 메소드를 알 필요는 없다. 아래 나열된 것들이 볼 만한 것.
+        // Mounting, Updating, Unmounting
+        // 공식문서로 확인하기 https://ko.reactjs.org/docs/react-component.html
+
 class App extends React.Component{
-    // state라는 오브젝트는 컴포넌트의 동적 데이터를 넣을 공간을 갖고있다.
-        // 데이터가 동적으로 변하기 때문에 state가 필요한 것.
     state = {
         cnt : 0
     }
     add = () => {
-        console.log('add')
         this.setState({cnt: this.state.cnt-1})
-    //    기존의 state를 새로운 state로 오버로딩하기
-        // setState로 화면에 다시 뿌리기와 같다.
     };
     minus = () => {
-        console.log('minus')
-        // this.setState({cnt: this.state.cnt+1})
-        // this.state.cnt 로 불러오는건 사실 성능상 좋은 방법은 아니다.
         this.setState(current => ({cnt : current.cnt +1 }));
-        // 위와 같이 this.state 를 current로 불러올 수 있다.
-            // 이 방법은 state를 set 할 때, react에서 외부의 상태에 의존하지 않는 가장 좋은 방법이다.
     };
-    // minus = () => { this.state.count = -1 };
-        // 위처럼 add, minus function 으로 state의 cnt 값을 직접 바꾸어도
-        // 아래 render()는 새로고침되지 않는다.
-        // 그리고 콘솔에 warning 이 뜬다 : Do not mutate state directly. Use setState()
 
-     render(){
+    // 콘솔을 통해 life cycle 메소드들이 각각 호출되는 시점을 보자
+    componentDidMount() {
+        console.log("component rendered")
+    }
+    componentDidUpdate() {
+        console.log("I just updated")
+    }
+
+    render(){
+         console.log('render!')
          return(
          <div>
              <h1>Its a class component - { this.state.cnt } ! </h1>
@@ -36,13 +39,4 @@ class App extends React.Component{
              )
      }
 }
-// Function App 컴포넌트는 function 이고, 어떤것을 return하여 스크린에 뿌려진다.
-// Class App 컴포넌트는 class지만 React.Component로부터 확장되고, 스크린에 뿌려진다.
-    // React는 모든 class 컴포넌트의 render 메소드를 자동으로 실행한다.
-    // Class App 컴포넌트는 지금부터 알아볼 state 라는 object를 갖고있다.
-
 export default App;
-
-// 정리 :
-    // 우리가 "set.State를 호출하는 순간마다" 리액트는 "새로운 state"와 함께 "render 함수를 호출"한다.
-    // 리액트는 리랜더한다!!
