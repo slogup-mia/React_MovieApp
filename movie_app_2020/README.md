@@ -19,11 +19,12 @@ React JS Fundamentals Course!
 -[x] \#3.3 Planning the Movie Component
 
 #### 4. MAKING THE MOVIE APP
--[ ] \#4.1
--[ ] \#4.2
--[ ] \#4.3
--[ ] \#4.4
--[ ] \#4.5
+-[x] \#4.0 Fetching Movies from API 
+-[ ] \#4.1 Styling the Movies
+-[ ] \#4.2 Styling the Movies
+-[ ] \#4.3 Adding Genres
+-[ ] \#4.4 Styles Timelapse
+-[ ] \#4.5 Cutting the summary 
 
 #### 5. CONCLUSIONS
 -[ ] \#5.0
