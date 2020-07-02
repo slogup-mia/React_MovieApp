@@ -16,7 +16,7 @@ React JS Fundamentals Course!
 -[x] \#3.0 Class Components and State
 -[x] \#3.1 All you need to know about State
 -[x] \#3.2 Component Life Cycle
--[ ] \#3.3 Planning the Movie Component
+-[x] \#3.3 Planning the Movie Component
 
 #### 4. MAKING THE MOVIE APP
 -[ ] \#4.1
