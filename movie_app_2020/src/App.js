@@ -1,69 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-// npm i prop-types
-// 내가 전달받은 props가 내가 원하는 props인지 확인해 주는 기능
 
-function Food({ nm, pic, rating }){
-    return <div>
-        <h3> My Favorite {nm}</h3>
-        <h4> {rating}/5.0 </h4>
-        <img src={pic} alt={nm} width={200} />
-    </div>
 
-}
-
-// JS obj의 리스트를 어떻게 가져올지 알아보자
-const foodILike = [
-    {
-        id: 1,
-        name: "Kimchi",
-        image: "https://kstory365.files.wordpress.com/2015/01/kimchi-01-cabbage.jpg",
-        rating: 4.4
-    },
-    {
-        id: 2,
-        name: "samgyetang",
-        image: "https://img.seoul.co.kr//img/upload/2019/07/25/SSI_20190725184016.jpg",
-        rating: 4.6
-    },
-    {
-        id: 3,
-        name: "vegi",
-        image: "https://covid19.lacounty.gov/wp-content/uploads/GettyImages-1128687123-1024x683.jpg",
-        rating: 3.3
+class App extends React.Component{
+    // state라는 오브젝트는 컴포넌트의 동적 데이터를 넣을 공간을 갖고있다.
+        // 데이터가 동적으로 변하기 때문에 state가 필요한 것.
+    state = {
+        cnt : 0
     }
-    ]
-
-function renderFood(dish){
-    console.log(dish)
-    return <Food nm={dish.name} pic={dish.image} key={dish.id} rating={dish.rating} />
+    add = () => {console.log('add')};
+    minus = () => {console.log('minus')};
+     render(){
+         return(
+         <div>
+             <h1>Its a class component - { this.state.cnt } ! </h1>
+             <button onClick={this.add}>Add</button>
+             <button onClick={this.minus}>Minus</button>
+         </div>
+             )
+     }
 }
+// Function App 컴포넌트는 function 이고, 어떤것을 return하여 스크린에 뿌려진다.
+// Class App 컴포넌트는 class지만 React.Component로부터 확장되고, 스크린에 뿌려진다.
+    // React는 모든 class 컴포넌트의 render 메소드를 자동으로 실행한다.
+    // Class App 컴포넌트는 지금부터 알아볼 state 라는 object를 갖고있다.
 
-
-// 관련 공식문서 https://ko.reactjs.org/docs/typechecking-with-proptypes.html
-Food.propTypes = {
-    nm : PropTypes.string.isRequired,
-    pic : PropTypes.string,
-    // isRequired = 필수요소 여부 : isRequired를 생략하면 prop이 없어도 오류가 뜨지 않는다.
-
-    // rating : PropTypes.string.isRequired
-//  rating을 string으로 체크했을 때, int로 들어오면 콘솔에서 오류 메세지가 뜬다.
-    //Warning: Failed prop type: Invalid prop `rating` of type `number` supplied to `Food`, expected `string`.
-    rating : PropTypes.number.isRequired
-    // 오류가 해결됐다
-};
-
-
-function App() {
-  return (
-    <div className="App">
-        <h1>Hello!</h1>
-        {/* map 처리를 함수(renderFood)로 묶어 사용할 수 있다. */}
-        {/*{foodILike.map( dish => <Food nm={dish.name} pic={dish.image} key={dish.id}> )}*/}
-        {foodILike.map(  renderFood )}
-        {console.log(foodILike.map(renderFood,'check!'))}
-
-    </div>
-  );
-}
 export default App;
