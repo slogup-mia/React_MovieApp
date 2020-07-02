@@ -14,3 +14,4 @@ React JS Fundamentals Course!
 
 #### 3. STATE
 -[x] \#3.0 Class Components and State
+-[x] \#3.1 All you need to know about State
