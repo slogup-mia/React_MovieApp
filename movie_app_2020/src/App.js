@@ -3,7 +3,7 @@ import React from 'react';
 function Food({nm, pic}){
     return <div>
         <h3> My Favorite {nm}</h3>
-        <img src={pic} alt="" width={200} />
+        <img src={pic} alt={nm} width={200} />
     </div>
 
 }
@@ -22,11 +22,20 @@ const foodILike = [
     }
     ]
 
+function renderFood(dish){
+    console.log(dish)
+    return <Food nm={dish.name} pic={dish.image} key={dish.id} />
+}
+
 function App() {
   return (
     <div className="App">
         <h1>Hello!</h1>
-        {foodILike.map(dish => <Food nm={dish.name} pic={dish.image} key={dish.id}/> )}
+        {/* map 처리를 함수(renderFood)로 묶어 사용할 수 있다. */}
+        {/*{foodILike.map( dish => <Food nm={dish.name} pic={dish.image} key={dish.id}> )}*/}
+        {foodILike.map(  renderFood )}
+        {console.log(foodILike.map(renderFood,'check!'))}
+
     </div>
   );
 }
