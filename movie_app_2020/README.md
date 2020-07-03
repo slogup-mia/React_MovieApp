@@ -23,7 +23,7 @@ React JS Fundamentals Course!
 -[x] \#4.1 Rendering the Movies
 -[x] \#4.2 Styling the Movies
 -[x] \#4.3 Adding Genres
--[ ] \#4.4 Styles Timelapse
+-[x] \#4.4 Styles Timelapse
 -[ ] \#4.5 Cutting the summary 
 
 #### 5. CONCLUSIONS

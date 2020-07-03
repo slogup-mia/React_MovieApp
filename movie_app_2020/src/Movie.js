@@ -10,7 +10,7 @@ function Movie({ id, year, title, summary, poster, genres }){
                 <h3 className="movie__title">{title}</h3>
                 <h5 className="movie__year">{year}</h5>
                 <p className="movie__summary">{summary}</p>
-                <ul className="genres">
+                <ul className="movie__genres">
                     {/*여기서도 마찬가지로 콘솔에서는 unique "Key"를 요구한다. */}
                         {/* map이 제공하는 argument를 활용하면 된다. */}
                     {genres.map( (genre, idx ) => (
