@@ -22,7 +22,7 @@ class App extends React.Component{
     render(){
         const {isLoading, movies } =  this.state;
         return (
-            <section>
+            <section className='container'>
                 {isLoading
                     // ReactJS 코드 안의 HTML 태그의 class는 class='name'이아니라
                     // className='name'으로 명시해주어야 한다.
