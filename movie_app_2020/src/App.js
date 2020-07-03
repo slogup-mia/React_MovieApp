@@ -1,5 +1,6 @@
 import React from 'react';
 import {HashRouter, Route} from "react-router-dom";
+import Detail from './routes/Detail';
 import About from './routes/About';
 import Home from './routes/Home';
 import Navigation from './components/Navigation';
@@ -21,6 +22,7 @@ function App() {
             {/*  path '/'으로 {Home}과 + 'about'으로 {About}이 함께 불러와진다.   */}
 
         <Route path='/about' component={About} />
+        <Route path='/movie-detail' component={Detail} />
 
     </HashRouter>
 
