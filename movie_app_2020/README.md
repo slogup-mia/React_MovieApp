@@ -27,12 +27,12 @@ React JS Fundamentals Course!
 -[x] \#4.5 Cutting the summary
 
 #### 5. CONCLUSIONS
--[ ] \#5.0
--[ ] \#5.1
+-[ ] \#5.0 Deploying to Github Pages
+-[ ] \#5.1 Are we done?
 
-#### 6. ROUTINF BONUS
--[ ] \#6.0
--[ ] \#6.1
--[ ] \#6.2
--[ ] \#6.3
--[ ] \#6.4
+#### 6. ROUTING BONUS
+-[x] \#6.0 Getting Ready for the Router
+-[ ] \#6.1 Building the Router
+-[ ] \#6.2 Building the Navigation
+-[ ] \#6.3 Sharing Props Between Routers
+-[ ] \#6.4 Redirecting
