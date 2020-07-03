@@ -44,4 +44,4 @@ React JS Fundamentals Course!
 -[x] \#6.1 Building the Router
 -[x] \#6.2 Building the Navigation
 -[x] \#6.3 Sharing Props Between Routes
--[ ] \#6.4 Redirecting
+-[x] \#6.4 Redirecting
