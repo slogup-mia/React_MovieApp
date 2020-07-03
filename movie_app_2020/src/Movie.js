@@ -1,12 +1,21 @@
 import React from "react";
 import PropTypes from 'prop-types';
-
- // state가 필요없는 컴포넌드의 경우에는
-    // class 컴포넌트로 짤 필요가 없다
-    // function 컴포넌트로 구현하자
+import './Movie.css'
 
 function Movie({id, year, title, summary, poster}){
-    return <h3>{title}</h3>
+    return (
+        <div className="movie">
+            <img src={poster} alt={title} title={title}/>
+            <h3 className="movie__title">{title}</h3>
+            <h5 className="movie__year">{year}</h5>
+            <p className="movie__summary">{summary}</p>
+
+            {/*    reactJS 태그 안에서 CSS style 먹이는 법 : duble braket : style= {{}}  */}
+            {/*    <p className="movie__summary" style={{ fontSize: 10px }}>{summary}</p>   */}
+
+        </div>
+        )
+
 }
 
 Movie.propTypes = {
