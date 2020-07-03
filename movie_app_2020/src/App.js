@@ -24,10 +24,13 @@ class App extends React.Component{
         return (
             <section>
                 {isLoading
-                    ? (<div clas = 'loader'>
-                        <span class = 'loader__text'> Loading.. </span>
+                    // ReactJS 코드 안의 HTML 태그의 class는 class='name'이아니라
+                    // className='name'으로 명시해주어야 한다.
+                    // Class Component와 구분하기 위한 문법
+                    ? (<div className= 'loader'>
+                        <span className = 'loader__text'> Loading.. </span>
                     </div>)
-                    : (<div class='movies'>
+                    : (<div className='movies'>
                         {movies.map(movie => (
                             <Movie
                                 summary={movie.summary}
@@ -36,6 +39,7 @@ class App extends React.Component{
                                 title={movie.title}
                                 year={movie.year}
                                 key ={movie.id}
+                                genres={movie.genres}
                             />
                         ))}
                     </div>)
